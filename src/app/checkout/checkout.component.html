@@ -1,0 +1,42 @@
+<div>
+  <h1>Book Purchasing</h1>
+  <form (ngSubmit)="submission()" #form="ngForm">
+    <div>
+      <input
+        type="text"
+        placeholder="Book name.."
+        name="bookName"
+        [(ngModel)]="bookName"
+        required
+      />
+    </div>
+    <div>
+      <input
+        type="text"
+        placeholder="Book author.."
+        name="author"
+        [(ngModel)]="author"
+        required
+      />
+    </div>
+    <div>
+      <input
+        type="text"
+        placeholder="Book tags.."
+        name="tags"
+        [(ngModel)]="tags"
+        required
+      />
+    </div>
+    <div>
+      <input
+        type="number"
+        placeholder="Quantity.."
+        name="amount"
+        [(ngModel)]="amount"
+        required
+      />
+    </div>
+    <button type="submit">Add Book</button>
+  </form>
+</div>
