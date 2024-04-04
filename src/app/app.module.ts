@@ -10,6 +10,14 @@ import { SettingsComponent } from './settings/settings.component';
 import { BooksOUTlibraryComponent } from './books-outlibrary/books-outlibrary.component';
 import { ServiceService } from './service.service';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule, Routes } from '@angular/router';
+const appRoutes: Routes = [
+  { path: '', component: HomepageComponent }, // Changed from '/'
+  { path: 'checkout', component: CheckoutComponent },
+  { path: 'BIL', component: BooksInLibraryComponent },
+  { path: 'BOL', component: BooksOUTlibraryComponent },
+  { path: 'settings', component: SettingsComponent },
+];
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +27,13 @@ import { HttpClientModule } from '@angular/common/http';
     SettingsComponent,
     BooksOUTlibraryComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    RouterModule.forRoot(appRoutes),
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
