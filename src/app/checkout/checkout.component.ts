@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { ServiceService } from '../service.service'; // Ensure the path is correct
-
+import { ServiceService } from '../service.service'; 
 @Component({
   selector: 'app-checkout',
   templateUrl: './checkout.component.html',
@@ -15,7 +14,7 @@ export class CheckoutComponent {
   constructor(private serviceService: ServiceService) {}
 
   checkBook = (): boolean => {
-    // Checks if all fields are filled and amount is greater than 0
+    
     return (
       this.bookName.trim() !== '' &&
       this.author.trim() !== '' &&
@@ -32,10 +31,9 @@ export class CheckoutComponent {
         tags: this.tags,
         amount: parseFloat(this.amount),
       };
-      this.serviceService.addBook(book); // Add the book to the service
+      this.serviceService.addBook(book); 
       alert('Book added successfully');
 
-      // Reset form fields
       this.bookName = '';
       this.author = '';
       this.tags = '';

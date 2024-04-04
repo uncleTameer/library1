@@ -7,22 +7,22 @@ import { ServiceService } from '../service.service';
   styleUrls: ['./books-outlibrary.component.css'],
 })
 export class BooksOUTlibraryComponent {
-  searchTerm: string = ''; // Model for the search input
-  books: any[] = []; // Stores the books returned from the API
+  searchTerm: string = ''; 
+  books: any[] = []; 
 
   constructor(private service: ServiceService) {}
 
   searchBooks(query: string) {
-    if (!query.trim()) return; // Avoid searching for empty or whitespace-only strings
+    if (!query.trim()) return; 
 
     this.service.searchBooks(query).subscribe(
       (data: any) => {
-        this.books = data.items || []; // Handle cases where no items are returned
+        this.books = data.items || []; 
         console.log(this.books);
       },
       (error) => {
-        console.error('Search failed:', error); // Log or handle errors appropriately
-        this.books = []; // Reset the books on error or no data
+        console.error('Search failed:', error); 
+        this.books = []; 
       }
     );
   }

@@ -1,10 +1,11 @@
-<div>
+<div class="navbar">
   <ul>
-    <li><a routerLink="/">home</a></li>
-    <li><a routerLink="/settings">settings</a></li>
-    <li><a routerLink="/BIL">books in library</a></li>
-    <li><a routerLink="/BOL">books out of library</a></li>
-    <li><a routerLink="/checkout">form</a></li>
+    <li routerLinkActive="active" (click)="toggleActive($event)"><a routerLink="/" >home</a></li>
+    <li routerLinkActive="active" (click)="toggleActive($event)"><a routerLink="/settings">settings</a></li>
+    <li routerLinkActive="active" (click)="toggleActive($event)"><a routerLink="/BIL">books in library</a></li>
+    <li routerLinkActive="active" (click)="toggleActive($event)"><a routerLink="/BOL">books out of library</a></li>
+    <li routerLinkActive="active" (click)="toggleActive($event)"><a routerLink="/checkout">checkout</a></li>
   </ul>
-  <router-outlet></router-outlet>
 </div>
+
+<router-outlet></router-outlet>
