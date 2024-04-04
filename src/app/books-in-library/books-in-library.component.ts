@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { ServiceService, Book } from '../service.service'; // Adjust the import path as necessary
+import { ServiceService, Book } from '../service.service'; 
 @Component({
   selector: 'app-books-in-library',
   templateUrl: './books-in-library.component.html',
@@ -20,7 +20,7 @@ export class BooksInLibraryComponent implements OnInit {
 
   ngOnDestroy() {
     if (this.booksSub) {
-      this.booksSub.unsubscribe(); // Prevent memory leaks
+      this.booksSub.unsubscribe(); 
     }
   }
 }

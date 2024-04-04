@@ -12,7 +12,7 @@ import { ServiceService } from './service.service';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 const appRoutes: Routes = [
-  { path: '', component: HomepageComponent }, // Changed from '/'
+  { path: '', component: HomepageComponent }, 
   { path: 'checkout', component: CheckoutComponent },
   { path: 'BIL', component: BooksInLibraryComponent },
   { path: 'BOL', component: BooksOUTlibraryComponent },

@@ -1,9 +1,7 @@
-<!-- Search Input -->
-<input type="text" [(ngModel)]="searchTerm" placeholder="Enter book name..." />
-<!-- Search Button -->
-<button (click)="searchBooks(searchTerm)">Search Books</button>
-<!-- Display Results -->
-<div *ngFor="let book of books">
-  <h2>{{ book.volumeInfo.title }}</h2>
-  <!-- Add more details as you like -->
+<div class="container">
+  <input type="text" [(ngModel)]="searchTerm" placeholder="Enter book name..." />
+  <button (click)="searchBooks(searchTerm)">Search Books</button>
+  <div *ngFor="let book of books">
+    <h2>{{ book.volumeInfo.title }}</h2>
+  </div>
 </div>
